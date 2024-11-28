@@ -1,10 +1,9 @@
-/* Author:WebThemez
- * Author URI:http://webthemez.com
- * License: Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
- */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,500);
 body {
-	font-family: "Roboto", sans-serif;
+	/* font-family: "Roboto", sans-serif; */
+	font-family: 'Raleway', sans-serif;
 }
 
 html,
@@ -1039,12 +1038,26 @@ z-index: -1;}
 	padding: 70px 50px;
 }
 .echo-title{
-	font-size: 5rem;
+	font-size: 44px;
     text-transform: uppercase;
     font-weight: bold;
 	color: #005f89;
+	font-family: 'Raleway', sans-serif;
+	position: relative;
+	border-bottom: 2px solid #429DD0;
+	display: inline-block;
+	padding-bottom: 20px;
+    margin: 0 0 20px;
 }
-
+.echo-title:before{
+	content: "";
+    position: absolute;
+    width: 140px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -70px;
+    height: 4px;
+}
 .about-us .about-us-ul > li{
 	width: 50%;
 	margin: 10px;

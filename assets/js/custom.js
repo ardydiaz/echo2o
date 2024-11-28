@@ -1,11 +1,8 @@
-/* Author:WebThemez
- * Author URI:http://webthemez.com
- * License: Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
- */
 
 (function($){
 	$(document).ready(function(){
-	
+	    new WOW().init();
+		smoothScroll.init();
 		$(".banner-image").backstretch([
 			'assets/img/slider.png',
 			'assets/img/slider2.png',
