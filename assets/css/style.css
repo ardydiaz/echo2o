@@ -1167,3 +1167,33 @@ z-index: -1;}
 .products .slide {
     text-align: center;
 }
+
+.projects .project-banner{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   position: relative;
+}
+.projects .project-banner .project-div .video video{
+	width: 60%;
+}
+
+.projects .project-banner .project-div:nth-child(2){
+	background-color: #f3f3f3;
+	padding: 28px;
+	position: absolute;
+	width: 59%;
+	HEIGHT: 70%;
+	top: 30px;
+	left: 460px;
+	box-shadow: 0 10px 8px -11px black;
+}
+.projects .project-banner .project-div:nth-child(2) .project-content{
+	width: 100%;
+}
+.projects .project-banner .project-div:nth-child(2) .project-content > h1{
+	color: #005f89;
+	font-family: 'Raleway', sans-serif;
+	font-size: 40px;
+	text-transform: uppercase;
+}
