@@ -3,6 +3,29 @@
 	$(document).ready(function(){
 	    new WOW().init();
 		smoothScroll.init();
+
+        var swiper = new Swiper(".blogs-slider", {
+			loop:true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			grabCursor:true,
+			spaceBetween: 20,
+			breakpoints: {
+			   640: {
+				 slidesPerView: 1,
+			   },
+			   768: {
+				 slidesPerView: 2,
+			   },
+			   991: {
+				 slidesPerView: 3,
+			   },
+			},
+		 });
+
+
 		$(".banner-image").backstretch([
 			'assets/img/slider.png',
 			'assets/img/slider2.png',

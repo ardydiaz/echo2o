@@ -5,7 +5,16 @@ body {
 	/* font-family: "Roboto", sans-serif; */
 	font-family: 'Raleway', sans-serif;
 }
-
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
 html,
 body {
 	height: 100%;
@@ -30,6 +39,7 @@ h4,
 h5,
 h6 {
 	color: #1F1F1F;
+	margin: 0;
 }
 h1 {
 	font-size: 38px;
@@ -1062,6 +1072,98 @@ z-index: -1;}
 	width: 50%;
 	margin: 10px;
 }
+
 .mb-50{
 	margin: 0 0 50px;
+}
+.products{
+	background: #eee;
+}
+.product-title{
+	font-size: 44px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #005f89;
+	font-family: 'Raleway', sans-serif;
+	position: relative;
+	border-bottom: 2px solid #005f89;
+	display: inline-block;
+	padding-bottom: 20px;
+	margin: 0 0 20px;
+	text-align: center;
+}
+
+.product-title:before{
+	content: "";
+    position: absolute;
+    width: 140px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -70px;
+    height: 4px;
+}
+.text-white{
+	color: #000000;
+}
+.products .p-content{
+	width: 50%;
+}
+.f-15{
+	font-size: 17px;
+}
+
+.products .slide .image {
+    height: 25rem;
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: -3rem;
+}
+.products .slide .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+.products .slide .image img:hover{
+	transform: scale(1.1);
+}
+.products .slide .content {
+    padding: 2rem;
+    padding-top: 5rem;
+    background: #fff;
+    -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+}
+.products .slide .content h3 {
+    font-size: 2rem;
+    color: #000;
+    text-transform: capitalize;
+	font-family: 'Poppins', sans-serif;
+}
+.products .slide .content p {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 2;
+}
+
+
+.products .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    background: #005f89;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+.products .slide {
+    text-align: center;
 }
