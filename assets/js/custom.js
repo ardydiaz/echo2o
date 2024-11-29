@@ -25,16 +25,36 @@
 			},
 		 });
 
+		 var swiper2 = new Swiper(".project-slider", {
+			loop:true,
+			autoplay: {
+				delay: 1500,
+				disableOnInteraction: false,
+			},
+			grabCursor:true,
+			spaceBetween: 20,
+			breakpoints: {
+			   640: {
+				 slidesPerView: 1,
+			   },
+			   768: {
+				 slidesPerView: 2,
+			   },
+			   991: {
+				 slidesPerView: 3,
+			   },
+			},
+		 });
 
-		$(".banner-image").backstretch([
-			'assets/img/slider.png',
-			'assets/img/slider2.png',
-			'assets/img/slider3.png'
-		], {
-			 duration: 1000, // 4 seconds per image
-             fade: 750 ,
-			 pixelRatio: "auto",
-			 transitionEasing: "easeInOutQuad"
+		const images = $('.banner-image div').map(function(){
+           return $(this).data("src");
+		}).get();
+
+		$(".banner-image").backstretch(images, {
+			duration: 4000, // 4 seconds per image
+			fade: 750,
+			pixelRatio: "auto",
+			transitionEasing: "easeInOutQuad"
 		});
 		
 		// Fixed header
