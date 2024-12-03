@@ -48,10 +48,19 @@
 										<div class="collapse navbar-collapse scrollspy smooth-scroll wow fadeInUp" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
 												<li class="active"><a href="#banner">Home</a></li>
-												<li><a href="#services">About us</a></li>
-												<li><a href="#about">Products</a></li>
-												<li><a href="#portfolio">Projects</a></li>
-												<li><a href="#contact">Contact Us</a></li>
+												<li><a href="#about-us">About us</a></li>
+												<li class="dropdown">
+													<a href="#products" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+														Products <i class="fa fa-chevron-down dropdown-arrow"></i>
+													</a>
+													<ul class="dropdown-menu">
+														<li><a href="#product1">Product 1</a></li>
+														<li><a href="#product2">Product 2</a></li>
+														<li><a href="#product3">Product 3</a></li>
+													</ul>
+												</li>
+												<li><a href="#projects">Projects</a></li>
+												<li><a href="#contact-us">Contact Us</a></li>
 											</ul>
 										</div>
 
@@ -72,18 +81,32 @@
 				<div data-src="assets/img/slider2.png"></div>
 				<div data-src="assets/img/slider3.png"></div>
 			</div>
-			<div class="banner-caption">
-				<div style="margin-top: 0px; opacity: 1;" class="wow fadeInDown">
+			<div class="banner-captions">
+				<!-- <div style="margin-top: 0px; opacity: 1;" class="wow fadeInDown">
                         <h1>Water Master Classic</h1>
                         <h3 class="padding-top30">Exclusive partnership with the best and proven technology</h3>
-                        <!-- <div class="padding-top60 contact-form">
-                            <button class="btn cta-button">PRICING</button>
-                        </div> -->
-                        <a id="" href="#services"><i class="fa fa-angle-down"></i></a>
+				</div> -->
+				<div class="banner-caption active">
+					<h1>Water Master Classic</h1>
+					<h3>Exclusive partnership with the best and proven technology</h3>
+					<a href="#services"><i class="fa fa-angle-down"></i></a>
+				</div>
+				<div class="banner-caption">
+					<h1>Innovative Solutions</h1>
+					<h3>Leading the way in water conservation technologies</h3>
+					<a href="#about"><i class="fa fa-angle-down"></i></a>
+				</div>
+				<div class="banner-caption">
+					<h1>Future Ready</h1>
+					<h3>Transforming the industry for tomorrow's needs</h3>
+					<a href="#contact"><i class="fa fa-angle-down"></i></a>
 				</div>
 			</div>
+			<div class="wave wave1"></div>
+			<div class="wave wave2"></div>
+			<div class="wave wave3"></div>
 		</div>
-        <section class="about-us pad-xl">
+        <section class="about-us pad-xl" id="about-us">
             <div class="container">
                 <ul class="about-us-ul">
                     <li>
@@ -97,7 +120,7 @@
                 </ul>
             </div>
         </section>
-		<section class="products pad-xl">
+		<section class="products pad-xl" id="products">
 			<div class="container">
 				<h1 class="product-title wow fadeInLeft">Products</h1>
 				<p class="mb-50 text-white f-15 p-content  wow fadeInRight">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam dolorem optio, fugiat atque ea aliquam impedit rerum fugit, praesentium adipisci vero dolore dignissimos cum nemo dolorum accusantium officiis. Laboriosam provident quasi consequuntur sit dolore modi aut hic qui facere magnam!</p>
@@ -149,7 +172,7 @@
 
 			</div>
 		</section>
-		<section class="projects pad-xl">
+		<section class="projects pad-xl" id="projects">
 			<div class="container">
 				<div class="project-banner">
 					<div class="project-div wow fadeInLeft">
@@ -254,7 +277,7 @@
 				</ul>
 		   </div>
 		</section>
-		<section class="contact pad-xl">
+		<section class="contact pad-xl" id="contact-us">
 			<div class="container">
 				<div class="title-contact text-center wow fadeInUp">
 					<h1>Contact us</h1>
@@ -326,7 +349,21 @@
 		</section>
 		<section class="footer">
 			<div class="container">
-				
+				<div class="row">
+					<div class="col-md-6">
+						<ul>
+							<li><i class="fa fa-copyright" aria-hidden="true"></i></li>
+							<li>Created By Ech2o Corporation | 2025 All rights reserved</li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<ul class="social-icon">
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</section>
    

@@ -150,9 +150,101 @@ blockquote {
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
+.navbar-nav .dropdown .dropdown-arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow when the dropdown is open */
+.navbar-nav .dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Optional: Adjust hover colors for links */
+.navbar-nav .dropdown-menu li a {
+    padding: 10px 20px;
+    color: #333; /* Text color */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .dropdown-menu li a:hover {
+    background-color: #007bff; /* Highlight on hover */
+    color: #fff; /* Text color on hover */
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+     transform: translateX(-50%) translateY(0);
+	left: 50%;
+}
+
+
+/* Hide the dropdown initially */
+.navbar-nav .dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); 
+    position: absolute;
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+	min-width: 322px;
+	border-radius: 4px; 
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+/* Styling the dropdown links */
+.navbar-nav .dropdown-menu li a {
+    padding: 14px 20px;
+    color: #005f89;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+	border-bottom: 1px solid #c6c6c6;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.navbar-nav .dropdown-menu li a:hover {
+    background-color: #63cdd7; /* Highlight on hover */
+    color: #fff; /* Text color on hover */
+}
+
+/* Position and style the arrow */
+.navbar-nav .dropdown:hover .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px; 
+    left: 143px; 
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent; 
+    border-bottom: 10px solid #fff; 
+    z-index: 10; 
+}
+
+/* Optional: Add shadow for the arrow */
+.navbar-nav .dropdown:hover .dropdown-menu::after {
+    content: "";
+    position: absolute;
+    top: -12px; 
+    left: 143px; 
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent; 
+    border-right: 11px solid transparent;
+    border-bottom: 11px solid rgba(0, 0, 0, 0.1); 
+    z-index: 9; /* Below the arrow */
+}
+
+
 .banner {
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	min-height: 100%;
 	position: relative;
 	color: #fff;
@@ -172,15 +264,74 @@ blockquote {
 	background-color: transparent;
 	content: "";
 }
-.banner-caption {
+.banner-captions {
 	position: absolute;
-	top: 44%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
 	width: 100%;
 	z-index: 2;
-	left: 0px;
 	text-align: center;
-	right: 0;
 }
+
+/* .banner-captions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+} */
+
+.banner-caption {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+
+.banner-caption.active {
+    display: block;
+    opacity: 1;
+}
+
+
+
+
+.banner .wave{
+	position: absolute;
+	bottom: -.5rem;
+    left: 0;
+    height: 11rem;
+    width: 100%;
+    background: url(../img/wave.png);
+    background-size: 100rem 11rem;
+    animation: waves 8s linear infinite;
+    background-repeat: repeat-x;
+}
+.banner .wave2{
+	animation-direction: reverse;
+    animation-duration: 6s;
+    opacity: .3;
+}
+.banner .wave3{
+	animation-duration: 4s;
+    opacity: .5;
+}
+
+@keyframes waves{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 100rem;
+    }
+}
+
+
+
+
+
 .subfooter {
 	background-color: #222222;
 	padding: 40px 0;
@@ -634,12 +785,15 @@ background-color: #D7D7D7;border-radius: 0;color: #fff;}
 	font-size: 16px;
 }
 .main-navigation .navbar-default .navbar-nav > li.active > a {
-	background-color: transparent;
-	color: #FFFFFF;
+	background-color: #fff;
+	color: #000;
+	border-radius: 15px 0px 15px 0px;
 }
 .main-navigation .navbar-default .navbar-nav > li > a:hover,
 .main-navigation .navbar-default .navbar-nav > li.active > a:hover {
-	color: #FFFFFF;
+	background-color: #fff;
+	color: #000;
+	border-radius: 15px 0px 15px 0px;
 }
 
 /* carousel */
@@ -1444,6 +1598,43 @@ z-index: -1;}
 }
 .footer{
 	background-color: #005f89;
-	padding: 20px;
+	padding: 5px;
 	color: #fff;
+}
+.footer ul{
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
+	margin-bottom: 0;
+	line-height: 3;
+}
+.footer ul > li {
+	margin-left: 7px;
+}
+.footer .social-icon {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0px;
+    justify-content: right;
+    margin-top: 7px;
+}
+
+.footer .social-icon li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-icon li a:hover {
+    background-color: #63cdd7; 
+    color: #fff; 
 }

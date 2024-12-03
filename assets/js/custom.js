@@ -4,6 +4,14 @@
 	    new WOW().init();
 		smoothScroll.init();
 
+		$('.dropdown').on('click', function (e) {
+            e.preventDefault();
+            // Toggle the arrow rotation
+            $(this).find('.dropdown-arrow').toggleClass('rotated');
+            // Show/hide the dropdown
+            $(this).find('.dropdown-menu').slideToggle();
+        });
+
         var swiper = new Swiper(".blogs-slider", {
 			loop:true,
 			autoplay: {
@@ -55,6 +63,9 @@
 			fade: 750,
 			pixelRatio: "auto",
 			transitionEasing: "easeInOutQuad"
+		}).on("backstretch.after", function (e, instance, index) {
+			$(".banner-caption").removeClass("active");
+			$(".banner-caption").eq(index).addClass("active");
 		});
 		
 		// Fixed header
